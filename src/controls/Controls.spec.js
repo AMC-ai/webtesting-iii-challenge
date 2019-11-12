@@ -4,6 +4,9 @@ import "react-testing-library/cleanup-after-each";
 
 import Controls from "./Controls.js";
 
+test('it renders correctly', () => {
+    render(<Controls />);
+});
 
 describe('controls btns closed & locked state ', () => {
 
@@ -11,9 +14,10 @@ describe('controls btns closed & locked state ', () => {
         const ControlsMock = jest.fn();
         const { queryByText } = render(<Controls locked={false}
             closed={false} toggleClosed={ControlsMock} />)
-        //why am i gettin undefined? is it bc there is no set state?
+
         const lockButton = queryByText('Lock Gate');
-        expect(lockButton.disable).toBe(true)
+        // console.log(lockButton.disabled)
+        expect(lockButton.disabled).toBe(true)
 
         const closeButton = queryByText('Close Gate');
         expect(closeButton.disabled).toBe(false)
