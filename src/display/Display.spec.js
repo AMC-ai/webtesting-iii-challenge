@@ -30,6 +30,7 @@ describe('<Display />', () => {
         const OpenState = getByText('Closed');
 
         expect(lockState.classList.value).toContain('red-led');
+        //expect(getByText('Locked').classList.value).toContain('red-led')
         expect(OpenState.classList.value).toContain('red-led');
     })
 })

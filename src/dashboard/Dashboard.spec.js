@@ -10,6 +10,8 @@ test('Dashboard renders correctly', () => {
 
 });
 
+//how do you make this more or less specific 
+
 test('Dashboard renders display & controls component', () => {
     render(<Dashboard />);
     const component = render(<Dashboard />);
